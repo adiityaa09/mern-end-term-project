@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
+const path = require('path');
 
 const env = require('./config/env');
 const errorHandler = require('./middlewares/error.middleware');
@@ -10,6 +11,7 @@ const ApiError = require('./utils/ApiError');
 const healthRoutes = require('./routes/health.route');
 const authRoutes = require('./routes/auth.route');
 const applicationRoutes = require('./routes/application.route');
+const resumeRoutes = require('./routes/resume.route');
 
 const app = express();
 
@@ -56,10 +58,14 @@ if (env.nodeEnv === 'development') {
   app.use(morgan('combined'));
 }
 
+// Static asset serving for local resume uploads
+app.use('/uploads', express.static(path.resolve(__dirname, '../uploads')));
+
 // Base API Routes
 app.use('/api/v1/health', healthRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/applications', applicationRoutes);
+app.use('/api/v1/resumes', resumeRoutes);
 
 // Catch-all 404 handler for undefined API routes
 app.use((req, res, next) => {
