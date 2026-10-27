@@ -10,7 +10,7 @@ Use this pre-formatted reference sheet to fill out your university or capstone s
 * **GitHub Repository URL**: https://github.com/adiityaa09/mern-end-term-project.git
 * **Deployed Application URL**: *(Insert your Vercel URL e.g. https://applytrack.vercel.app)*
 * **Backend API URL**: *(Insert your Render/Railway URL e.g. https://applytrack-api.onrender.com)*
-* **Demo Video Link**: *(Insert your YouTube / Loom / Google Drive link)*
+* **Demo Video Link**: *https://drive.google.com/file/d/13iBbNlW3Zcv556MMTwBUWLkuUu7Z3psw/view?usp=sharing*
 * **Student Name**: Aditya
 * **Tech Stack**: MERN (MongoDB Atlas, Express.js, React 18, Node.js), Tailwind CSS, @dnd-kit, Recharts, Zod, Multer, node-cron, Nodemailer, Jest.
 

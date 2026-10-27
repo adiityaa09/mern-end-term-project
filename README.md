@@ -20,7 +20,7 @@ ApplyTrack is a full-stack, university end-term capstone application built to so
 | ⚙️ **Backend API (Render)** | https://mern-end-term-project-pq9p.onrender.com |
 | 🩺 **API Health Check** | https://mern-end-term-project-pq9p.onrender.com/api/v1/health |
 | 💻 **GitHub Repository** | https://github.com/adiityaa09/mern-end-term-project |
-| 🎬 **Demo Video** | _ADD YOUR YOUTUBE / DRIVE LINK HERE_ |
+| 🎬 **Demo Video** | https://drive.google.com/file/d/13iBbNlW3Zcv556MMTwBUWLkuUu7Z3psw/view?usp=sharing |
 
 > ### ⚠️ Notes for Evaluators
 > 1. **First load may take 30–60 seconds.** The backend runs on Render's free tier, which sleeps after 15 minutes of inactivity. Open the API link once to wake it up, then use the app normally.
