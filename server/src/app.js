@@ -9,6 +9,7 @@ const errorHandler = require('./middlewares/error.middleware');
 const ApiError = require('./utils/ApiError');
 const healthRoutes = require('./routes/health.route');
 const authRoutes = require('./routes/auth.route');
+const applicationRoutes = require('./routes/application.route');
 
 const app = express();
 
@@ -58,6 +59,7 @@ if (env.nodeEnv === 'development') {
 // Base API Routes
 app.use('/api/v1/health', healthRoutes);
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/applications', applicationRoutes);
 
 // Catch-all 404 handler for undefined API routes
 app.use((req, res, next) => {
