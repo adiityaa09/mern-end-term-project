@@ -2,6 +2,7 @@ const app = require('./src/app');
 const env = require('./src/config/env');
 const connectDB = require('./src/config/db');
 const logger = require('./src/utils/logger');
+const { initReminderCron } = require('./src/jobs/reminderCron');
 const mongoose = require('mongoose');
 
 // Handle uncaught exceptions synchronously
@@ -20,6 +21,9 @@ const startServer = async () => {
   server = app.listen(env.port, () => {
     logger.success(`🚀 Server running in [${env.nodeEnv}] mode on http://localhost:${env.port}`);
     logger.info(`Health check: http://localhost:${env.port}/api/v1/health`);
+
+    // Initialize scheduled jobs
+    initReminderCron();
   });
 };
 

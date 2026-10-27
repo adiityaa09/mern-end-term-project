@@ -12,6 +12,7 @@ const healthRoutes = require('./routes/health.route');
 const authRoutes = require('./routes/auth.route');
 const applicationRoutes = require('./routes/application.route');
 const resumeRoutes = require('./routes/resume.route');
+const notificationRoutes = require('./routes/notification.route');
 
 const app = express();
 
@@ -66,6 +67,7 @@ app.use('/api/v1/health', healthRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/applications', applicationRoutes);
 app.use('/api/v1/resumes', resumeRoutes);
+app.use('/api/v1/notifications', notificationRoutes);
 
 // Catch-all 404 handler for undefined API routes
 app.use((req, res, next) => {
